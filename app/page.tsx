@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Particles from "./components/particles";
 
 export default function Home() {
     return (
@@ -8,7 +9,7 @@ export default function Home() {
                     <div className="hover:underline underline-offset-4">
                         <Link
                             href={"/pricelist"}
-                            className="text-lg transition-all duration-300 hover:text-slate-500"
+                            className="select-none text-lg transition-all duration-300 hover:text-slate-500"
                         >
                             Pricelist
                         </Link>
@@ -16,13 +17,17 @@ export default function Home() {
                     <div className="hover:underline underline-offset-4">
                         <Link
                             href={"/contact"}
-                            className="text-lg transition-all duration-300 hover:text-slate-500"
+                            className="select-none text-lg transition-all duration-300 hover:text-slate-500"
                         >
                             Contact
                         </Link>
                     </div>
                 </div>
-                <div className="text-6xl sm:text-8xl animate-bounce hover:underline p-2 font-bold">
+                <Particles
+                    className="absolute inset-0 -z-10 animate-fade-in"
+                    quantity={100}
+                />
+                <div className="select-none text-6xl sm:text-8xl animate-bounce hover:underline p-2 font-bold">
                     Aprele Store
                 </div>
                 <div className="flex items-center flex-col sm:flex-row gap-2">
